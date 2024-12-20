@@ -6,15 +6,15 @@
 </script>
 
 <div class="app">
-	<Header />
 
 	<main>
 		{@render children()}
+    <Header />
 	</main>
 
 	<footer>
 		<p>
-			visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to learn about SvelteKit
+			visit <a href="https://kwaw.co">kwaw.co</a> to build even more impressive solutions!
 		</p>
 	</footer>
 </div>

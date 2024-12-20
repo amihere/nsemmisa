@@ -1,12 +1,11 @@
 <script lang="ts">
-	import Counter from './Counter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcomeFallback from '$lib/images/svelte-welcome.png';
 </script>
 
 <svelte:head>
 	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content="Ask away... " />
 </svelte:head>
 
 <section>
@@ -14,18 +13,14 @@
 		<span class="welcome">
 			<picture>
 				<source srcset={welcome} type="image/webp" />
-				<img src={welcomeFallback} alt="Welcome" />
+				<img src={welcomeFallback} alt="Ask" />
 			</picture>
 		</span>
-
-		to your new<br />SvelteKit app
 	</h1>
 
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
+  <span>
+    <input type="text" name="search" id="search">
+  </span>
 </section>
 
 <style>
@@ -56,4 +51,18 @@
 		top: 0;
 		display: block;
 	}
+
+  #search {
+    padding: 10px 20px;
+    border: none;
+    margin: 5px;
+    font-size: 15px;
+    border-radius: 4px;
+    outline: none;
+    margin-top: 30px;
+  }
+
+  #search:hover {
+    border: 1px solid #fcfcfc;
+  }
 </style>
