@@ -11,7 +11,7 @@
       <li aria-current={$page.url.pathname === "/" ? "page" : undefined}>
         <a href="/">Find</a>
       </li>
-      <li aria-current={$page.url.pathname === "/?a=post" ? "page" : undefined}>
+      <li aria-current={$page.url.pathname !== "/" ? "page" : undefined}>
         <a href="/?a=post">Post</a>
       </li>
     </ul>

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcomeFallback from '$lib/images/svelte-welcome.png';
+	import welcome from '$lib/images/welcome.webp';
+	import welcomeFallback from '$lib/images/welcome.png';
 </script>
 
 <svelte:head>
@@ -13,14 +13,14 @@
 		<span class="welcome">
 			<picture>
 				<source srcset={welcome} type="image/webp" />
-				<img src={welcomeFallback} alt="Ask" />
+				<img src={welcomeFallback} alt="home-page banner" />
 			</picture>
 		</span>
 	</h1>
 
-  <span>
-    <input type="text" name="search" id="search">
-  </span>
+  <div id="searchbox">
+    <input class="searchInput" type="text" name="search" id="search">
+  </div>
 </section>
 
 <style>
@@ -47,22 +47,31 @@
 	.welcome img {
 		position: absolute;
 		width: 100%;
-		height: 100%;
+		height: 80%;
 		top: 0;
 		display: block;
 	}
 
+  #searchbox{
+    width: 100%;
+  }
+
   #search {
+    width: 60%;
     padding: 10px 20px;
-    border: none;
-    margin: 5px;
+    border: 1px solid #909090;
     font-size: 15px;
     border-radius: 4px;
     outline: none;
     margin-top: 30px;
   }
 
+  .searchInput {
+    margin: auto;
+    display: block;
+  }
+
   #search:hover {
-    border: 1px solid #fcfcfc;
+    border: 1px solid #c0c0c0;
   }
 </style>
