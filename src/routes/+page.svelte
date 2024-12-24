@@ -34,20 +34,21 @@
 
 	h1 {
 		width: 100%;
+    min-height: 20px;
+    height: auto;
 	}
 
 	.welcome {
 		display: block;
 		position: relative;
 		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
+		height: 100%;
 	}
 
 	.welcome img {
 		position: absolute;
 		width: 100%;
-		height: 80%;
+		height: auto;
 		top: 0;
 		display: block;
 	}
