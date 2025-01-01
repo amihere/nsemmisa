@@ -1,6 +1,7 @@
 <script lang="ts">
 	import welcome from '$lib/images/welcome.webp';
 	import welcomeFallback from '$lib/images/welcome.png';
+  import PreFooter from '$lib/PreFooter.svelte';
 </script>
 
 <svelte:head>
@@ -21,6 +22,7 @@
   <div id="searchbox">
     <input class="searchInput" type="text" name="search" id="search">
   </div>
+  <PreFooter />
 </section>
 
 <style>

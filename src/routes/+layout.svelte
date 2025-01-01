@@ -1,57 +1,59 @@
 <script lang="ts">
-  import Header from '$lib/Header.svelte';
-	import '../app.css';
+  import "../app.css";
+  import PageLoader from "./PageLoader.svelte";
 
-	let { children } = $props();
+  import Header from "$lib/Header.svelte";
+
+  let { data, children } = $props();
 </script>
 
+<PageLoader />
+
 <div class="app">
-
-	<main>
-		{@render children()}
+  <main>
     <Header />
-	</main>
-
-	<footer>
-		<p>
-			visit <a href="https://kwaw.co">kwaw.co</a> to build even more impressive solutions!
-		</p>
-	</footer>
+    {@render children()}
+  </main>
+  <footer>
+    <p>
+      visit <a href="https://kwaw.co">kwaw.co</a> to build even more impressive solutions!
+    </p>
+  </footer>
 </div>
 
 <style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
+  .app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+    max-width: 64rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
 
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+  }
 
-	footer a {
-		font-weight: bold;
-	}
+  footer a {
+    font-weight: bold;
+  }
 
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
-	}
+  @media (min-width: 480px) {
+    footer {
+      padding: 12px 0;
+    }
+  }
 </style>
